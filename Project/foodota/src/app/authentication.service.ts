@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Customer } from './customer';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,8 @@ import { Observable } from 'rxjs';
 export class AuthenticationService {
 
   baseUrl = 'http://localhost:9097/foodota/api/customer';
+
+  baseUrl1 = 'http://localhost:9097/foodota/customer/customers';
   constructor(private http: HttpClient) { }
 
   login(customer:any):Observable<any>{
@@ -23,5 +26,10 @@ export class AuthenticationService {
  
   logOut() {
     sessionStorage.removeItem('username')
+  }
+
+  saveCustomer(customer: Object): Observable<Object> {
+
+    return this.http.post(`${this.baseUrl1}`, customer);
   }
 }

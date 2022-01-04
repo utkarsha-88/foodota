@@ -2,21 +2,59 @@
 
     <div class="form-container">
         <h2>Register Here!!!</h2>
-        <form method="post" class="form-group" style="text-align: center;" ngNativeValidate>
-            <input type="text" name="fullname" id="fullname" placeholder="Fullname" required autofocus>
-            <br /><br />
-            <input type="email" name="email" id="email" placeholder="E-mail" required>
-            <br /><br />
-            <input type="password" name="password" id="password" placeholder="Password" required>
-            <br /><br />
-            <input type="text" name="city" id="city" placeholder="City" required>
-            <br /> <br />
-            <input type="text" name="landmark" id="landmark" placeholder="Landmark" required>
-            <br /><br />
-            <input type="text" name="phoneno." id="phoneno." placeholder="PhoneNo." required>
-            <br /><br />
-            <input type="text" name="pincode" id="pincode" placeholder="Pincode" required>
-            <br /><br />
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-group" style="text-align: center;">
+            <div class="form-group">
+            <input type="text" formControlName="fullName" id="fullname" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.fullName.errors }" placeholder="Fullname" required
+                autofocus />
+            <div *ngIf="submitted && f.fullName.errors" class="invalid-feedback">
+                <div *ngIf="f.fullName.errors.required">Full Name is required</div>
+                <div *ngIf="f.fullName.errors.pattern">Invalid  Name</div>
+            </div></div>
+            <br />
+            <input type="email" formControlName="email" class="form-control" id="email"
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="E-mail" required />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+            </div><br />
+
+            <input type="text" formControlName="phoneNo" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.phoneNo.errors }" placeholder="Phone" required />
+            <div *ngIf="submitted && f.phoneNo.errors" class="invalid-feedback">
+                <div *ngIf="f.phoneNo.errors.required">Phone is required</div>
+                <div *ngIf="f.phoneNo.errors.maxlength">Invalid Phone number</div>
+            </div><br>
+
+            <input type="password" formControlName="password" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" id="password" placeholder="Password"
+                required />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div><br />
+
+            <input type="text" formControlName="city" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.city.errors }" id="city" placeholder="City" required />
+            <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                <div *ngIf="f.city.errors.required">City is required</div>
+
+            </div><br />
+
+            <input type="text" formControlName="landmark" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.landmark.errors }" id="landmark" placeholder="Landmark"
+                required />
+            <div *ngIf="submitted && f.landmark.errors" class="invalid-feedback">
+                <div *ngIf="f.landmark.errors.required">Landmark is required</div>
+            </div><br />
+
+            <input type="text" formControlName="pincode" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.pincode.errors }" id="pincode" 
+                placeholder="Pincode" required/>
+            <div *ngIf="submitted && f.pincode.errors" class="invalid-feedback">
+                <div *ngIf="f.pincode.errors.required">Pincode is required</div>
+            </div><br><br>
+
             <label for="submit"></label>
             <input type="submit" name="submit" id="submit" value="Register">
 
