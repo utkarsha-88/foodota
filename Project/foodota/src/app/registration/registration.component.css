@@ -2,9 +2,11 @@
 
 background: url('/assets/images/loginback.png') no-repeat;
 background-size: cover;
-height: 100%;
+height: 800px;
 width: 100%;
-background-position: center center;
+background-position:  center;
+margin-bottom: -195px;
+padding-top: 100px;
 
 }
 
@@ -15,12 +17,14 @@ h2{
 }
 
 .form-container{
+  
     margin-left: 450px;
     background: linear-gradient(rgba(0,0,0,0.3),(rgba(92, 2, 2, 0.3)));
     width: 380px;
     padding: 10px 30px;
     border-radius: 10px;
     box-shadow: 7px 7px 60px #000;
+    margin-bottom: 150px;
 }
 
 input[type="submit"] {

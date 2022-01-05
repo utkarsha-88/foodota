@@ -5,6 +5,7 @@ section{
     width: 100%;
     background: url("/assets/images/loginback.png");
     background-size: cover;
+    margin-bottom: -195px;
     background-position: center center;
 }
 .form-container{
