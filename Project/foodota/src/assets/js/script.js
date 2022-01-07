@@ -3,6 +3,8 @@ var total = 0;
 
 var i = 1;
 
+var k = 1;
+
 var message = "Please select a size";
 
 // List of the amount of every product in the cart
@@ -25,9 +27,9 @@ function add(n){
    brand = "brand" + n;
    priceId = "price" + n;
    quantityId = "quantity" + n;
+  
 
-
-   name = document.getElementById(brand).innerHTML;
+   iname = document.getElementById(brand).innerHTML;
 
    price = document.getElementById(priceId).innerHTML;
 
@@ -45,23 +47,47 @@ function add(n){
    i += 1;
 
     // text of the li element
-   var textnode = document.createTextNode(name+""+quantity+" x "+price+" tl, size: "+size);
+   var textnode = document.createTextNode("Item Name = "+iname+" | "+" Quantity = "+quantity+" \nPrice = "+price+"₹, size: "+size);
 
    // add the text to li element
    node.appendChild(textnode);
 
-   // add li element to ul list
+   // add li element to ul list 
    document.getElementById("items").appendChild(node);
 
 
 total += Number(price) * Number(quantity);
 
 // update the total
-document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + " TL";
+document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + " ₹";
 
 //Add a remove button
-document.getElementById(item).innerHTML += '<button onclick="deleItem('+"'"+item+"'"+')">x</button';
+document.getElementById(item).innerHTML += '&nbsp;&nbsp;<button class="btn btn-danger btn-sm" onclick="deleItem('+"'"+item+"'"+')"> Remove </button><br><br>';
 
+
+// var table = document.getElementById("myTable");
+
+//   var row = table.insertRow(k);
+
+//   var cell1 = row.insertCell(0);
+
+//   var cell2 = row.insertCell(1);
+
+//   var cell3 = row.insertCell(2);
+
+//   var cell4 = row.insertCell(3);
+
+
+//   cell1.innerHTML = iname;
+
+//   cell3.innerHTML = quantity;
+
+//   cell2.innerHTML = price;
+
+//   cell4.innerHTML = document.getElementById(item).innerHTML += '<button onclick="deleItem('+"'"+item+"'"+')"> delete </button>';
+
+
+//   i++;
 }
 
 //delete message when select element is clicked
@@ -82,6 +108,27 @@ function deleItem(eId){
   total -= itemCost[n];
 
   // Updating the cost of products in the cart
-  document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + " $"; 
+  
+
+  // var table = document.getElementById("myTable");
+
+  // var row = table.insertRow(i);
+
+  // var cell1 = row.insertCell(0);
+
+  // var cell2 = row.insertCell(1);
+
+  // var cell3 = row.insertCell(2);
+
+
+
+  // cell1.innerHTML = iname;
+
+  // cell2.innerHTML = quantity;
+
+  // cell3.innerHTML = price;
+  // i++;
+
+  document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + "₹"; 
 }
 

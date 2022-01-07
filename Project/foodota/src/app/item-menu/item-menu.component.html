@@ -1,21 +1,27 @@
+<h2 style="background-color:rgb(228, 65, 65);
+color: aliceblue;
+
+text-align: center;"
+
+>BURGER</h2>
 <div class="container">
     <div class="articles">
       <div>
         <img src="/assets/images/s-img-1" />
         <div class="prod">
-          <h3 class="tit" id="brand1">Nike</h3>
-          <h4 id="price1">19.90</h4>
-          <h4>tl</h4>
+          <h3 class="tit" id="brand1"  name="orderName">Cheese Burger</h3>
+          <h4 id="price1"  name="orderPrice">150.00 </h4>
+          <h4>₹</h4>
+        
         </div>
         <div class="inputs">
           <input
             type="number"
             id="quantity1"
-            name="quantity1"
             min="1"
             max="99"
             value="1"
-          />
+            required [(ngModel)]="order.qty" name="qty" />
           <select name="size1" id="size1" onclick="deleteE('message1')">
             <option value="size" diasbled selected>Size</option>
             <option value="XS">XS</option>
@@ -25,27 +31,28 @@
             <option value="XL">XL</option>
           </select>
           <div>
-             <button class="addTo" onclick="add(1)">Add</button>
+             <button class="addTo"onclick="add(1)" (click)="onSubmit('Cheese Burger',150, order.qty )">Order</button>
           </div>
         </div>
         <p id="message1"></p>
       </div>
       <div>
-        <img src="assets/images/s-img-2" />
+        <img src="/assets/images/s-img-2" />
         <div class="prod">
-          <h3 class="tit" id="brand2">Nike</h3>
-          <h4 id="price2">19.90</h4>
-          <h4>tl</h4>
+          <h3 class="tit" id="brand2" name="orderName">Double Patty Burger</h3>
+          <h4 id="price2"  name="orderPrice">200.00 </h4>
+          <h4>₹</h4>
+
         </div>
         <div class="inputs">
           <input
             type="number"
             id="quantity2"
-            name="quantity2"
+           
             min="1"
             max="99"
             value="1"
-          />
+            required [(ngModel)]="order.qty" name="qty" />
           <select name="size2" id="size2" onclick="deleteE('message2')">
             <option value="size" diasbled selected>Size</option>
             <option value="XS">XS</option>
@@ -55,7 +62,7 @@
             <option value="XL">XL</option>
           </select>
           <div>
-             <button class="addTo" onclick="add(2)">Add</button>
+             <button class="addTo" onclick="add(2)" (click)="onSubmit('Double Patty Burger',200, order.qty )">Order</button>
           </div>
         </div>
         <p id="message2"></p>
@@ -63,19 +70,20 @@
       <div>
         <img src="/assets/images/s-img-3"/>
         <div class="prod">
-          <h3 class="tit" id="brand3">Adidas</h3>
-          <h4 id="price3">19.90</h4>
-          <h4>tl</h4>
+          <h3 class="tit" id="brand3" name="orderName">Tikki Burger</h3>
+          <h4 id="price3"  name="orderPrice">350.00 </h4>
+          <h4>₹</h4>
+        
         </div>
         <div class="inputs">
           <input
             type="number"
             id="quantity3"
-            name="quantity3"
+          
             min="1"
             max="99"
             value="1"
-          />
+            required [(ngModel)]="order.qty" name="qty" />
           <select name="size3" id="size3" onclick="deleteE('message3')">
             <option value="size" diasbled selected>Size</option>
             <option value="XS">XS</option>
@@ -85,7 +93,7 @@
             <option value="XL">XL</option>
           </select>
           <div>
-             <button class="addTo" onclick="add(3)">Add</button>
+             <button class="addTo" onclick="add(3)" (click)="onSubmit('Tikki Burger',300, order.qty )">Order</button>
           </div>
         </div>
         <p id="message3"></p>
@@ -93,19 +101,19 @@
       <div>
         <img src="/assets/images/s-img-4" />
         <div class="prod">
-          <h3 class="tit" id="brand4">Puma</h3>
-          <h4 id="price4">19.90</h4>
-          <h4>tl</h4>
+          <h3 class="tit" id="brand4" name="orderName">Jumbo Burger</h3>
+          <h4 id="price4" name="orderPrice">400.00</h4>
+          <h4>₹</h4>
         </div>
         <div class="inputs">
           <input
             type="number"
             id="quantity4"
-            name="quantity4"
+         
             min="1"
             max="99"
             value="1"
-          />
+            required [(ngModel)]="order.qty" name="qty"/>
           <select name="size4" id="size4" onclick="deleteE('message4')">
             <option value="size" diasbled selected>Size</option>
             <option value="XS">XS</option>
@@ -115,17 +123,28 @@
             <option value="XL">XL</option>
           </select>
           <div>
-             <button class="addTo" onclick="add(4)">Add</button>
+             <button class="addTo" onclick="add(4)" (click)="onSubmit('Jumbo Burger',400, order.qty )">Add</button>
           </div>
         </div>
         <p id="message4"></p>
       </div>
     </div>
+    <hr style="border: 10px black; width: 100%; height: 10px;">
     <div class="cart">
-      <h3 class="tit">My Articles</h3>
-      <ul id="items">
-      </ul>
-      <h3 id="total" style="text-align: right">Total: 0 TL</h3>
+     
+      <h3 class="tit"
+      
+      style="background-color:rgb(228, 65, 65);
+      color: aliceblue;
+      text-align: center;
+      ">My Cart</h3><br>
+      <ol id="items">
+        
+      </ol><br>
+      <hr style="size: 10px;">
+      <h3 id="total" style="text-align: right">Total: 0 ₹</h3>
+      <input type="button" class="btn btn-outline-success mt-5" value="Check Out"/>
     </div>
+ 
   </div>
   

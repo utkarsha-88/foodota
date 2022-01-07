@@ -17,7 +17,7 @@
 }
 
 .cart{
-    width: 300px;
+    width: 100%;
     margin:10px;
     margin-left: 10px;
 }
@@ -38,10 +38,7 @@ img{
 
 }
 
-.tit{
-    width: 100%;
-    padding-left: 20px;
-}
+
 
 #price1, #price2, #price3, #price4{
     margin-right: 5px;
@@ -62,18 +59,19 @@ input{
     position: relative;
     left: 0px;
     width: 100px;
-    height: 25px;
+    height: 45px;
     border-radius: 15px;
     margin-top: 20px;
-    background-image: linear-gradient(to right, #ff512f, #dd2476);
+    background-image: linear-gradient(to right, #08af4e, #24dd87);
     color: beige;
     border-width: 0px;
 }
 
 .addTo:hover{
     background-image: none;
-    background-color: red;
-    box-shadow: 0 0 20px red, 0 0 60px red, 0 0 60px red;
+    background-color: crimson;
+    box-shadow: 0 0 5px red, 0 0 5px red, 0 0 5px red;
+    border: #ff512f;
 }
 
 li{
@@ -99,4 +97,11 @@ button:hover{
     
     background-color: #dd2476
     
+}
+
+.btn{
+position: relative;
+    width: 100px;
+    height: 50px;
+    float: right;
 }
