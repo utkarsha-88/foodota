@@ -17,4 +17,13 @@ export class OrderserviceService {
 
     return this.http.post(`${this.baseUrl}`,order);
   }
+
+  getOrderList(): Observable<any>{
+
+    return this.http.get(`${this.baseUrl}`);
+  }
+
+  deleteOrder(orderId: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${orderId}`, { responseType: 'text' });
+  }
 }

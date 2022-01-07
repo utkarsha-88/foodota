@@ -47,7 +47,7 @@ export class ItemMenuComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/home']).then(() => {
+    this.router.navigate(['/cart']).then(() => {
       window.location.reload();
 
     });

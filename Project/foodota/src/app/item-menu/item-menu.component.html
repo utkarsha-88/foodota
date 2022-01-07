@@ -21,7 +21,7 @@ text-align: center;"
             min="1"
             max="99"
             value="1"
-            required [(ngModel)]="order.qty" name="qty" />
+            required [(ngModel)]="order.qty" name="quantity1" />
           <select name="size1" id="size1" onclick="deleteE('message1')">
             <option value="size" diasbled selected>Size</option>
             <option value="XS">XS</option>
@@ -52,7 +52,7 @@ text-align: center;"
             min="1"
             max="99"
             value="1"
-            required [(ngModel)]="order.qty" name="qty" />
+            required [(ngModel)]="order.qty" name="quantity2" />
           <select name="size2" id="size2" onclick="deleteE('message2')">
             <option value="size" diasbled selected>Size</option>
             <option value="XS">XS</option>
@@ -83,7 +83,7 @@ text-align: center;"
             min="1"
             max="99"
             value="1"
-            required [(ngModel)]="order.qty" name="qty" />
+            required [(ngModel)]="order.qty" name="quantity3" />
           <select name="size3" id="size3" onclick="deleteE('message3')">
             <option value="size" diasbled selected>Size</option>
             <option value="XS">XS</option>
@@ -113,7 +113,7 @@ text-align: center;"
             min="1"
             max="99"
             value="1"
-            required [(ngModel)]="order.qty" name="qty"/>
+            required [(ngModel)]="order.qty" name="quantity4"/>
           <select name="size4" id="size4" onclick="deleteE('message4')">
             <option value="size" diasbled selected>Size</option>
             <option value="XS">XS</option>
@@ -143,7 +143,7 @@ text-align: center;"
       </ol><br>
       <hr style="size: 10px;">
       <h3 id="total" style="text-align: right">Total: 0 ₹</h3>
-      <input type="button" class="btn btn-outline-success mt-5" value="Check Out"/>
+      <input type="button" class="btn btn-outline-success mt-5" (click)="gotoList()" value="Check Out"/>
     </div>
  
   </div>

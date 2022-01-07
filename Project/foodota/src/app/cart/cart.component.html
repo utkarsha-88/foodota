@@ -1,1 +1,34 @@
-<p>cart works!</p>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Your Cart List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-info">
+            <thead>
+                <tr>
+                    <th>Order Id</th>
+                    <th>Order Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cart of order | async">
+                    <td>{{ cart.orderId }}</td>
+                    <td>{{ cart.orderName | uppercase }}</td>
+                    <td>{{ cart.qty}}</td>
+                    <td>{{ cart.orderPrice | currency:"INR"}}</td>
+                    <td>
+
+                          <button (click)="deleteProduct(cart.orderId)" class="btn btn-danger"
+                            style="margin-left: 10px">Remove</button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-warning"
+        style=" float: right; margin-right: 165px;">Payment</button>
+    </div>
+</div>
