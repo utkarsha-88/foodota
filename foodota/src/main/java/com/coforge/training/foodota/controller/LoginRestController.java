@@ -2,6 +2,7 @@ package com.coforge.training.foodota.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import com.coforge.training.foodota.model.Customer;
 import com.coforge.training.foodota.repository.UserRepository;
 
 @RestController
+@CrossOrigin(value="http://localhost:4200")
 @RequestMapping("/api")
 public class LoginRestController {
 	

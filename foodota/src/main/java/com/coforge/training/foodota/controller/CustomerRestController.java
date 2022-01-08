@@ -1,7 +1,6 @@
 package com.coforge.training.foodota.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,7 +30,7 @@ public class CustomerRestController {
 		
 	}
 	
-	@PutMapping("/customers/{id}")
+	/*@PutMapping("/customers/{id}")
 	public ResponseEntity<Customer> updateCustomer(@PathVariable(value="id") Long id,@Validated @RequestBody Customer customer)
 	{
 		Customer c=cService.findById(id);
@@ -47,6 +46,12 @@ public class CustomerRestController {
 		final Customer updatedCustomer=cService.save(c); ////Invokes Save() Method of JPA Repository
 		return ResponseEntity.ok().body(updatedCustomer);
 		
+	}*/
+	
+	@PutMapping("/customers/{id}")
+	public Customer updateProducts(@RequestBody Customer customer, @PathVariable Long id) {
+	return cService.save(customer);
+
 	}
 
 }

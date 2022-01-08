@@ -38,19 +38,10 @@ public class Customer {
 	
 	@Column(name="landmark")
 	private String landmark;
+	
+//	@OneToOne(mappedBy="customer",cascade = CascadeType.ALL)
+//	private MyOrder myOrder;
 
-	public Customer(Long id, String email, String fullName, String password, String phoneNo, String city,
-			String pincode, String landmark) {
-		super();
-		this.id = id;
-		this.email = email;
-		this.fullName = fullName;
-		this.password = password;
-		this.phoneNo = phoneNo;
-		this.city = city;
-		this.pincode = pincode;
-		this.landmark = landmark;
-	}
 
 	public Customer() {
 		// TODO Auto-generated constructor stub
@@ -125,11 +116,19 @@ public class Customer {
 		this.landmark = landmark;
 	}
 	
-	@Override
-	public String toString() {
-		return "Customer [id=" + id + ", email=" + email + ", fullName=" + fullName + ", password=" + password
-				+ ", phoneNo=" + phoneNo + ", city=" + city + ", pincode=" + pincode + ", landmark=" + landmark + "]";
-	}
+//	public MyOrder getMyOrder() {
+//		return myOrder;
+//	}
+//
+//	public void setMyOrder(MyOrder myOrder) {
+//		this.myOrder = myOrder;
+//	}
+	
+	
+
+	
+	
+	
 		
 
 }
