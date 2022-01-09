@@ -7,17 +7,20 @@
   </a>
   <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-      <a routerLink="home" class="nav-link" routerLinkActive="active">Home</a>
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="home" class="nav-link" routerLinkActive="active">Home</a>
     </li>
     <li class="nav-item">
-      <a routerLink="login" class="nav-link" routerLinkActive="active">Login</a>
+      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="login" class="nav-link" routerLinkActive="active">Login</a>
     </li>
     <li class="nav-item">
-      <a routerLink="registration" class="nav-link" routerLinkActive="active">Sign up</a>
+      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="registration" class="nav-link" routerLinkActive="active">Sign up</a>
     </li>
     <li class="nav-item">
-      <a routerLink="contact" class="nav-link" routerLinkActive="active">Contact</a>
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="contact" class="nav-link" routerLinkActive="active">Contact</a>
     </li>
+    <li class="nav-item">
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="logout" class="nav-link" routerLinkActive="active">Logout</a>
+  </li>
   </ul>
 </nav>
 
@@ -59,13 +62,13 @@
   </div> -->
 
   <section class="footer">
-    <div class="share">
+    <div> <h4 style="color: aquamarine; margin-top:-150px;">Follow us For Exiciting Offers </h4>
         <a href="#" class="btn"><i class="fab fa-facebook fa-2x"></i></a>
         <a href="#" class="btn"><i class="fab fa-twitter fa-2x"></i></a>
         <a href="#" class="btn"><i class="fab fa-instagram fa-2x"></i></a>
         <a href="#" class="btn"><i class="fab fa-google-plus fa-2x"></i></a>
     </div>
   
-    <h3 class="credit"> created by <span> Team UTKARSHA </span> | all rights reserved! </h3>
+    <h3 class="credit"> Created By <span> Team UTKARSHA </span> | All Rights Reserved @ 2022 </h3>
   
   </section>

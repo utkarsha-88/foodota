@@ -10,12 +10,13 @@ import { Order } from './order';
 export class OrderserviceService {
 
   baseUrl= 'http://localhost:9097/foodota/place/orders';
+  baseUrldemo = 'http://localhost:9097/foodota/place/placeorder/me@gmail.com';
 
   constructor(private http:HttpClient) { }
 
   newOrder(order:Object):Observable<Object>{//Creating New Product In Inventory Project In ECLIPSE
 
-    return this.http.post(`${this.baseUrl}`,order);
+    return this.http.post(`${this.baseUrldemo}`,order);
   }
 
   getOrderList(): Observable<any>{

@@ -105,113 +105,56 @@
         <div class="box-container">
     
             <div class="box">
-                <span class="price"> INR 100 </span>
+                
                 <img src="/assets/images/p-1.jpg" alt="">
                 <a href="#" class="fas fa-heart"></a>
-                <h3>tasty burger</h3>
-                <a routerLink="/item" class="btn" routerLinkActive="active">Order Now</a>
+                <h3>BURGER</h3>
+                <a *ngIf="loginService.isUserLoggedIn()" routerLink="/item" class="btn" routerLinkActive="active">Order Now</a>
             </div>
             <div class="box">
-                <span class="price"> INR 100</span>
-                <img src="/assets/images/cakes.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-                <h3>tasty cakes</h3>
-                <a href="#" class="btn">order now</a>
-            </div>
-            <div class="box">
-                <span class="price">INR 200</span>
-                <img src="/assets/images/cakes1.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-                <h3>tasty sweets</h3>
                 
-                <a href="#" class="btn">order now</a>
+                <img src="../../assets/images/cake.jpg" alt="">
+                <a href="#" class="fas fa-heart"></a>
+                <h3>CAKES</h3>
+                <a *ngIf="loginService.isUserLoggedIn()" routerLink="/item" class="btn" routerLinkActive="active">Order Now</a>
             </div>
             <div class="box">
-                <span class="price"> INR 100 </span>
+                
+                <img src="../../assets/images/sweet.jfif" alt="">
+                <a href="#" class="fas fa-heart"></a>
+                <h3>DESSERT</h3>
+                
+                <a *ngIf="loginService.isUserLoggedIn()" routerLink="/item" class="btn" routerLinkActive="active">Order Now</a>
+            </div>
+            <div class="box">
+                
                 <img src="/assets/images/p-4.jpg" alt="">
                 <a href="#" class="fas fa-heart"></a>
-                <h3>tasty <br>cupcakes</h3>
+                <h3>BRIYANI</h3>
                
-                <a href="#" class="btn">order now</a>
+                <a *ngIf="loginService.isUserLoggedIn()" routerLink="/item" class="btn" routerLinkActive="active">Order Now</a>
             </div>
             <div class="box">
-                <span class="price"> INR 100 </span>
-                <img src="/assets/images/smoothie.jpg" alt="">
+                
+                <img src="../../assets/images/drinks.jfif" alt="">
                 <a href="#" class="fas fa-heart"></a>
-                <h3>Cold<br>drinks</h3>
+                <h3>DRINKS</h3>
                
-                <a href="#" class="btn">order now</a>
+                <a *ngIf="loginService.isUserLoggedIn()" routerLink="/item" class="btn" routerLinkActive="active">Order Now</a>
             </div>
             <div class="box">
-                <span class="price"> INR 100 </span>
+                
                 <img src="/assets/images/p-6.jpg" alt="">
                 <a href="#" class="fas fa-heart"></a>
-                <h3>cold<br> ice-cream</h3>
+                <h3>ICE-CREAM</h3>
                
-                <a href="#" class="btn">order now</a>
+                <a *ngIf="loginService.isUserLoggedIn()" routerLink="/item" class="btn" routerLinkActive="active">Order Now</a>
             </div>
-    
-            <div class="box">
-                <span class="price"> INR 100 </span>
-                <img src="/assets/images/noodles1.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-                <h3>Noodles</h3>
-               
-                <a href="#" class="btn">order now</a>
-            </div>
-    
-            <div class="box">
-                <span class="price"> INR 100 </span>
-                <img src="/assets/images/biryani1.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-                <h3>Biryani</h3>
-               
-                <a href="#" class="btn">order now</a>
-            </div>
-    
-            <div class="box">
-                <span class="price"> INR 100 </span>
-                <img src="/assets/images/pavbhaji.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-                <h3>Pavbhaji</h3>
-               
-                <a href="#" class="btn">order now</a>
-            </div>
-       
-        <div class="box">
-            <span class="price"> INR 100 </span>
-            <img src="/assets/images/suzzi.jpg" alt="">
-            <a href="#" class="fas fa-heart"></a>
-            <h3>suzzi</h3>
-           
-            <a href="#" class="btn">order now</a>
-        </div>
-    
-        <div class="box">
-            <span class="price"> INR 100 </span>
-            <img src="/assets/images/sandwhich.jpg" alt="">
-            <a href="#" class="fas fa-heart"></a>
-            <h3>sandwhich</h3>
-           
-            <a href="#" class="btn">order now</a>
-        </div>
-    
-        <div class="box">
-            <span class="price"> INR 100 </span>
-            <img src="/assets/images/s-img-2.jpg" alt="">
-            <a href="#" class="fas fa-heart"></a>
-            <h3>Pizza</h3>
-           
-            <a href="#" class="btn">order now</a>
-        </div>
-    
-    
     </div>
     </section>
 
     <!-- end  -->
-
-    
+ 
 <div class="step-container">
 
     <div id="h1"><h1 >how it <span>works</span></h1></div>
@@ -239,3 +182,49 @@
 
 </div>
 
+<!-- Reviews -->
+<section class="review" id="review">
+
+    <div class="container" id="h1"><h1 style="text-align: center; margin-top: 200px; margin-bottom: -100px;"> Our <span>Customer Reviews</span> </h1><br></div>
+    <div class="box-container">
+
+    <div class="box">
+    <img src="../../assets/images/review.jfif" alt="">
+    <h3>Utkarsha</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="far fa-star"></i>
+    </div>
+    <p>Awesome Service!!!</p>
+    </div>
+    <div class="box">
+    <img src="../../assets/images/review.jfif" alt="">
+    <h3>Ayush</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="far fa-star"></i>
+    </div>
+    <p>Best food ordering website till now.</p>
+    </div>
+    <div class="box">
+    <img src="../../assets/images/review.jfif" alt="">
+    <h3>Sarvada</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="far fa-star"></i>
+    </div>
+    <p>Khup Mast Ahet food Items ani service pn khup chan ahe. Parat Nakki bhet dya.</p>
+    </div>
+    </div>
+    </section>
+    <!-- Review Ends -->
+   

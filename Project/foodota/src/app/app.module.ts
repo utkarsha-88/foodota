@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ItemMenuComponent } from './item-menu/item-menu.component';
 import { CartComponent } from './cart/cart.component';
+import { PaymentComponent } from './payment/payment.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CartComponent } from './cart/cart.component';
     LoginComponent,
     ContactusComponent,
     ItemMenuComponent,
-    CartComponent
+    CartComponent,
+    PaymentComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

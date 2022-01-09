@@ -36,4 +36,11 @@ export class CartComponent implements OnInit {
         },
         error => console.log(error));
   }
+
+  gotoList() {
+    this.router.navigate(['payment']).then(() => {
+      window.location.reload();
+
+    });
+  }
 }

@@ -4,10 +4,10 @@ color: aliceblue;
 text-align: center;"
 
 >BURGER</h2>
-<div class="container">
+<div class="container d-flex justify-content-center" >
     <div class="articles">
       <div>
-        <img src="/assets/images/s-img-1" />
+        <img src="../../assets/images/burger.jpg" />
         <div class="prod">
           <h3 class="tit" id="brand1"  name="orderName">Cheese Burger</h3>
           <h4 id="price1"  name="orderPrice">150.00 </h4>
@@ -15,28 +15,28 @@ text-align: center;"
         
         </div>
         <div class="inputs">
-          <input
+          Add Quantity: <input
             type="number"
             id="quantity1"
             min="1"
             max="99"
             value="1"
-            required [(ngModel)]="order.qty" name="quantity1" />
+            required [(ngModel)]="order.qty" name="quantity1" /><br><br>
           <select name="size1" id="size1" onclick="deleteE('message1')">
-            <option value="size" diasbled selected>Size</option>
-            <option value="XS">XS</option>
+            <option value="size" diasbled selected>Type</option>
+            <option value="Maharaja Mac">Maharaja Mac</option>
             <option value="S">S</option>
             <option value="M">M</option>
             <option value="L">L</option>
             <option value="XL">XL</option>
           </select>
           <div>
-             <button class="addTo"onclick="add(1)" (click)="onSubmit('Cheese Burger',150, order.qty )">Order</button>
+             <button class="addTo" onclick="add(1)" (click)="onSubmit('Cheese Burger',150, order.qty )">Order</button>
           </div>
         </div>
         <p id="message1"></p>
       </div>
-      <div>
+      <!-- <div>
         <img src="/assets/images/s-img-2" />
         <div class="prod">
           <h3 class="tit" id="brand2" name="orderName">Double Patty Burger</h3>
@@ -128,7 +128,7 @@ text-align: center;"
         </div>
         <p id="message4"></p>
       </div>
-    </div>
+    </div> -->
     <hr style="border: 10px black; width: 100%; height: 10px;">
     <div class="cart">
      
@@ -143,7 +143,7 @@ text-align: center;"
       </ol><br>
       <hr style="size: 10px;">
       <h3 id="total" style="text-align: right">Total: 0 ₹</h3>
-      <input type="button" class="btn btn-outline-success mt-5" (click)="gotoList()" value="Check Out"/>
+      <input type="button" class="btn btn-outline-success mt-5" (click)="gotoList()" value="View Cart"/>
     </div>
  
   </div>

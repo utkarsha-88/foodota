@@ -7,6 +7,8 @@ import { Customer } from './customer';
   providedIn: 'root'
 })
 export class AuthenticationService {
+  
+ 
 
   baseUrl = 'http://localhost:9097/foodota/api/customer';
 
@@ -15,7 +17,9 @@ export class AuthenticationService {
 
   login(customer:any):Observable<any>{
 
-    return this.http.post('http://localhost:9097/foodota/api/customer', customer)
+    return this.http.post('http://localhost:9097/foodota/api/customer', customer);
+
+
   }
 
   isUserLoggedIn() {
@@ -25,11 +29,18 @@ export class AuthenticationService {
   }
  
   logOut() {
-    sessionStorage.removeItem('username')
+    sessionStorage.removeItem('username');
   }
 
   saveCustomer(customer: Object): Observable<Object> {
 
     return this.http.post(`${this.baseUrl1}`, customer);
   }
+  
+  getCustomerById(id: string): Observable<any>{
+
+    return this.http.get(`${this.baseUrl}`);
+  }
+
+  
 }

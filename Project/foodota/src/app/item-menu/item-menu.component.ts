@@ -11,10 +11,6 @@ import { Order } from '../order';
 })
 export class ItemMenuComponent implements OnInit {
 
-  item1: string = "Burger";
-  price1: number = 150.00;
-
-
   order: Order = new Order();
   submitted = false;
 

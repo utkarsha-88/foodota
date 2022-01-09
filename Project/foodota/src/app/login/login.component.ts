@@ -12,6 +12,8 @@ import { AuthenticationService } from '../authentication.service';
 })
 export class LoginComponent implements OnInit {
 
+  data : any;
+
   username = '';
   password = '';
   invalidLogin = false
@@ -20,7 +22,9 @@ export class LoginComponent implements OnInit {
   loginSuccess = false;
 
 
-  constructor(private lService: AuthenticationService, private router: Router) { }
+  constructor(private lService: AuthenticationService, private router: Router) {
+
+  }
 
   ngOnInit(): void {
   }
@@ -35,10 +39,17 @@ export class LoginComponent implements OnInit {
       if (response) {
         this.router.navigate(['']);
         sessionStorage.setItem('username', this.username)
+
+        var data = sessionStorage.getItem('username');
+        console.log(data);
+        
         this.invalidLogin = false;
         this.loginSuccess = true;
         this.successMessage = 'Login Successful.';
-    }
+
+       
+
+      }
       else {
         this.invalidLogin = true
       }
@@ -46,4 +57,5 @@ export class LoginComponent implements OnInit {
     this.loginSuccess = false;
 
   }
+
 }

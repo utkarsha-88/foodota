@@ -10,6 +10,7 @@
                     <th>Order Name</th>
                     <th>Quantity</th>
                     <th>Price</th>
+                    <th>Total:</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -19,6 +20,8 @@
                     <td>{{ cart.orderName | uppercase }}</td>
                     <td>{{ cart.qty}}</td>
                     <td>{{ cart.orderPrice | currency:"INR"}}</td>
+                    <td>{{cart.orderPrice*cart.qty }}</td>
+                    
                     <td>
 
                           <button (click)="deleteProduct(cart.orderId)" class="btn btn-danger"
@@ -26,9 +29,12 @@
 
                     </td>
                 </tr>
+               
             </tbody>
         </table>
+        
         <button class="btn btn-warning"
-        style=" float: right; margin-right: 165px;">Payment</button>
+        (click)="gotoList()"
+        style=" float: right; margin-right: 165px;">Payment</button><br>
     </div>
 </div>
