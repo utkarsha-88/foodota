@@ -1,0 +1,121 @@
+.cont {
+
+    background: url('/assets/images/loginback.png') no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    background-position:  center;
+    margin-bottom: -195px;
+    padding-top: 100px;
+    
+    }
+    
+    h2{
+        text-transform: uppercase;
+        font-size: 2em;
+        text-align: center;
+    }
+    
+    .form-container{
+      
+        margin-left: 450px;
+        background: linear-gradient(rgba(0,0,0,0.3),(rgba(92, 2, 2, 0.3)));
+        width: 380px;
+        padding: 10px 30px;
+        border-radius: 10px;
+        box-shadow: 7px 7px 60px #000;
+        margin-bottom: 150px;
+    }
+    
+    input[type="submit"] {
+    
+      position: relative;
+      border: none;
+      transition: .8s ease-in;
+      z-index: 1;
+      background-color: red;
+      width: 200px;
+    }
+    
+    #submit ::before,
+    #submit::after {
+      position: absolute;
+      content: "";
+      z-index: -1;
+    }
+    
+    #submit:hover {
+      box-shadow: inset -10.5em 0 0 0 green, inset 10.5em 0 0 0 green;
+      
+    }
+    
+    input {
+    
+      opacity: .8;
+    
+      border: 0;
+    
+      border-left: 4px solid;
+    
+      border-color: #FF0000;
+    
+      padding: 10px;
+    
+      color: black;
+    
+    }
+    
+    
+    
+    input[type="text"]:focus,
+    
+    input[type="email"]:focus,
+    
+    input[type="password"]:focus {
+    
+      outline: 0;
+    
+      background: white;
+    
+      border-radius: 1.2rem;
+    
+      border-color: transparent;
+    
+    }
+    
+    ::placeholder {
+    
+      color: black;
+    
+    }
+    
+    
+    
+    /*Media queries */
+    
+    
+    
+    @media all and (min-width: 481px) and (max-width: 568px) {
+    
+      #container {
+    
+        margin-top: 10%;
+    
+        margin-bottom: 10%;
+    
+      }
+    
+    }
+    
+    @media all and (min-width: 569px) and (max-width: 768px) {
+    
+      #container {
+    
+        margin-top: 5%;
+    
+        margin-bottom: 5%;
+    
+      }
+    
+    }
+    

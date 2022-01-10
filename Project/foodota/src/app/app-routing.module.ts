@@ -21,7 +21,7 @@ const routes: Routes = [
 {path:'cart/:id',component:CartComponent},
 {path:'logout',component:LogoutComponent},
 {path:'payment/:id',component:PaymentComponent},
-{path:'account/:id',component:AccountComponent}
+{path:'account',component:AccountComponent}
 ];
 
 @NgModule({

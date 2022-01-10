@@ -26,7 +26,7 @@ export class PaymentComponent implements OnInit {
       cardName: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
       cvv: ['', [Validators.required, Validators.maxLength(3)]],
       cardNumber: ['', [Validators.required,Validators.maxLength(16)]],
-      expires: ['', [Validators.required,Validators.pattern("\\d{4}-\\d{2}")]]
+      expires: ['', [Validators.required,Validators.pattern("\\d{4}-\\d{2}-\\d{2}")]]
     });
   }
 
@@ -55,9 +55,12 @@ export class PaymentComponent implements OnInit {
  }
 
  gotoList() {
-   this.router.navigate(['/success',this.route.snapshot.paramMap.get('id')]).then(() => {
+   alert('Your Order Has Been Placed Successfully!!!')
+   this.router.navigate(['/home',this.route.snapshot.paramMap.get('id')]).then(() => {
      window.location.reload();
 
    });
  }
+
+ 
 }
