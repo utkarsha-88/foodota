@@ -64,31 +64,16 @@ document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + " â‚
 //Add a remove button
 document.getElementById(item).innerHTML += '&nbsp;&nbsp;<button class="btn btn-danger btn-sm" onclick="deleItem('+"'"+item+"'"+')"> Remove </button><br><br>';
 
-
-// var table = document.getElementById("myTable");
-
-//   var row = table.insertRow(k);
-
-//   var cell1 = row.insertCell(0);
-
-//   var cell2 = row.insertCell(1);
-
-//   var cell3 = row.insertCell(2);
-
-//   var cell4 = row.insertCell(3);
+return total;
 
 
-//   cell1.innerHTML = iname;
-
-//   cell3.innerHTML = quantity;
-
-//   cell2.innerHTML = price;
-
-//   cell4.innerHTML = document.getElementById(item).innerHTML += '<button onclick="deleItem('+"'"+item+"'"+')"> delete </button>';
-
-
-//   i++;
 }
+
+// function amount(total){
+
+//   var amt = total;
+//   return amt;
+// }
 
 //delete message when select element is clicked
 function deleteE(eId) {

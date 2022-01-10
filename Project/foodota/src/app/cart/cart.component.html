@@ -19,8 +19,9 @@
                     <td>{{ cart.orderId }}</td>
                     <td>{{ cart.orderName | uppercase }}</td>
                     <td>{{ cart.qty}}</td>
-                    <td>{{ cart.orderPrice | currency:"INR"}}</td>
-                    <td>{{cart.orderPrice*cart.qty }}</td>
+                    <td >{{ cart.orderPrice | currency:"INR"}}</td>
+                    <td class = "price_value">{{cart.orderPrice*cart.qty }}</td>
+                    
                     
                     <td>
 
@@ -36,5 +37,6 @@
         <button class="btn btn-warning"
         (click)="gotoList()"
         style=" float: right; margin-right: 165px;">Payment</button><br>
+        
     </div>
 </div>

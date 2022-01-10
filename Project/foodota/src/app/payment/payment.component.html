@@ -5,6 +5,10 @@
             <li class="highlighted">Payment</li>
 
         </ul>
+        <!-- <div>
+            <button class="btn btn-info" onclick="amount()"> View Amount</button>
+            <h3 id="total" style="text-align: right">Total: 0 ₹</h3>
+    </div> -->
     </div>
     <div class="main">
         <div class="left-illustration">
@@ -44,35 +48,43 @@
                     <label for="upi">Upi</label>
                 </div>
             </div>
-            <form id="payment-form">
+            <form  [formGroup]="paymentForm" id="payment-form" (ngSubmit)="onSubmit()" class="form-group">
                 <div class="card-info-container">
                     <div class="card-info">
                         <label>Card Number
-                            <input class="full-width" id="card-num" type="text" placeholder="1234 5678 9012 3456">
+                            <input type="text" formControlName="cardNumber" class="full-width" id="card-num" type="text" 
+                            [ngClass]="{ 'is-invalid': submitted && f.cardNumber.errors }"
+                            placeholder="1234 5678 9012 3456" required autofocus/>
                         </label>
                         <label>Name on Card
-                            <input class="full-width" id="name" type="text" placeholder="Dua Lipa">
+                            <input type="text" formControlName="cardName" class="full-width" id="name"
+                            [ngClass]="{ 'is-invalid': submitted && f.cardName.errors }"
+                            placeholder="Utkarsha Agarwal" required autofocus/>
+                            
                         </label>
                         <div class="expire-ccv">
                             <label>Expires
                                 <span class="expire-date">
-                                    <input id="month" type="text" size="2" maxlength="2" placeholder="MM">
-                                    <span>/</span>
-                                    <input id="year" type="text" size="2" maxlength="2" placeholder="YY">
+                                    <input id="month" type="text" formControlName="expires" class="form-control"
+                                    [ngClass]="{'is-invalid': submitted && f.expires.errors} "size="7" maxlength="7" placeholder="MM/YY">
+                                   
                                 </span>
                             </label>
                             <label>CCV
-                                <input id="cvv" type="text" size="3" maxlength="3" placeholder="123">
+                                <input id="cvv" type="text" formControlName="cvv" class="form-control"
+                                     [ngClass]="{'is-invalid': submitted && f.cvv.errors} "size="3" maxlength="3" placeholder="123">
                             </label>
                         </div>
                     </div>
                 </div>
+                
                 <label class="save-card-info">
                     <input type="checkbox">
                     Save details for future payment
                 </label>
+                <button class="btn btn-success" >Place Your Order</button>
             </form>
-            <button class="button" onclick="document.getElementById('payment-form').reset()">Place Your Order</button>
+   
         </div>
     </div>
 </div>

@@ -9,17 +9,19 @@ import { ItemMenuComponent } from './item-menu/item-menu.component';
 import { CartComponent } from './cart/cart.component';
 import { LogoutComponent } from './logout/logout.component';
 import { PaymentComponent } from './payment/payment.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
 {path:'' ,redirectTo:'home' ,pathMatch:'full'},
-{path:'home',component:HomeComponent},
+{path:'home/:id',component:HomeComponent},
 {path:'login',component:LoginComponent},
 {path:'registration',component:RegistrationComponent},
 {path:'contact',component:ContactusComponent},
-{path:'item',component:ItemMenuComponent},
-{path:'cart',component:CartComponent},
+{path:'item/:id',component:ItemMenuComponent},
+{path:'cart/:id',component:CartComponent},
 {path:'logout',component:LogoutComponent},
-{path:'payment',component:PaymentComponent}
+{path:'payment/:id',component:PaymentComponent},
+{path:'account/:id',component:AccountComponent}
 ];
 
 @NgModule({

@@ -23,12 +23,8 @@ text-align: center;"
             value="1"
             required [(ngModel)]="order.qty" name="quantity1" /><br><br>
           <select name="size1" id="size1" onclick="deleteE('message1')">
-            <option value="size" diasbled selected>Type</option>
+            <option value="size" diasbled selected>Choose</option>
             <option value="Maharaja Mac">Maharaja Mac</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
           </select>
           <div>
              <button class="addTo" onclick="add(1)" (click)="onSubmit('Cheese Burger',150, order.qty )">Order</button>

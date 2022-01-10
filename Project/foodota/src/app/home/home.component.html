@@ -109,7 +109,7 @@
                 <img src="/assets/images/p-1.jpg" alt="">
                 <a href="#" class="fas fa-heart"></a>
                 <h3>BURGER</h3>
-                <a *ngIf="loginService.isUserLoggedIn()" routerLink="/item" class="btn" routerLinkActive="active">Order Now</a>
+                <a *ngIf="loginService.isUserLoggedIn()" (click)="onItemSelect()" class="btn" routerLinkActive="active">Order Now</a>
             </div>
             <div class="box">
                 

@@ -10,16 +10,16 @@
       <a *ngIf="loginService.isUserLoggedIn()" routerLink="home" class="nav-link" routerLinkActive="active">Home</a>
     </li>
     <li class="nav-item">
-      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="login" class="nav-link" routerLinkActive="active">Login</a>
-    </li>
-    <li class="nav-item">
-      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="registration" class="nav-link" routerLinkActive="active">Sign up</a>
-    </li>
-    <li class="nav-item">
       <a *ngIf="loginService.isUserLoggedIn()" routerLink="contact" class="nav-link" routerLinkActive="active">Contact</a>
     </li>
     <li class="nav-item">
       <a *ngIf="loginService.isUserLoggedIn()" routerLink="logout" class="nav-link" routerLinkActive="active">Logout</a>
+  </li>
+  <li class="nav-item">
+    <a *ngIf="!loginService.isUserLoggedIn()" routerLink="login" class="nav-link" routerLinkActive="active">Login</a>
+  </li>
+  <li class="nav-item">
+    <a *ngIf="!loginService.isUserLoggedIn()" routerLink="registration" class="nav-link" routerLinkActive="active">Sign up</a>
   </li>
   </ul>
 </nav>

@@ -27,6 +27,8 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+
   }
 
   checkLogin() {
@@ -35,13 +37,17 @@ export class LoginComponent implements OnInit {
       "password": this.password
     }
     this.lService.login(customer).subscribe((response) => {
-      console.log(response);
+      console.log(response.id);
       if (response) {
-        this.router.navigate(['']);
+        // response.array.forEach((element: { id: any; }) => {
+        //   console.log(element.id);
+          
+        // });
+        this.router.navigate(['home',response.id]);
+        // this.router.navigate(['']);
         sessionStorage.setItem('username', this.username)
-
         var data = sessionStorage.getItem('username');
-        console.log(data);
+       // console.log(data);
         
         this.invalidLogin = false;
         this.loginSuccess = true;

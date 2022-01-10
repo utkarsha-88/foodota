@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { OrderserviceService } from '../orderservice.service';
 import { Order } from '../order';
@@ -13,10 +14,13 @@ export class ItemMenuComponent implements OnInit {
 
   order: Order = new Order();
   submitted = false;
+  user: any;
 
-  constructor(private oService: OrderserviceService, private router: Router) { }
+  constructor(private oService: OrderserviceService, private router: Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+   
+    
   }
 
   newProduct(): void {
@@ -25,8 +29,10 @@ export class ItemMenuComponent implements OnInit {
   }
 
   save() {
+     this.user = this.route.snapshot.params['id'];
     console.log(this.order);
-    this.oService.newOrder(this.order)
+    console.log(this.user);
+    this.oService.newOrder(this.order,this.user)
       .subscribe(data => console.log(data), error => console.log(error));
     this.order = new Order();
     // this.gotoList();
@@ -37,13 +43,14 @@ export class ItemMenuComponent implements OnInit {
     this.order.orderName = productName;
     this.order.orderPrice = productPrice;
     this.order.qty = productQuantity;
+    
 
     this.submitted = true;
     this.save();
   }
 
   gotoList() {
-    this.router.navigate(['/cart']).then(() => {
+    this.router.navigate(['/cart',this.user]).then(() => {
       window.location.reload();
 
     });

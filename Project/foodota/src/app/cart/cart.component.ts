@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { Order } from '../order';
 import { OrderserviceService } from '../orderservice.service';
@@ -14,19 +15,28 @@ import { OrderserviceService } from '../orderservice.service';
 export class CartComponent implements OnInit {
 
   order: Observable<Order[]> | any;
+  user: any;
+  total: number = 0
 
-  constructor(private oService: OrderserviceService, private router:Router) { }
+  
+
+  constructor(private oService: OrderserviceService, private router:Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     
+    // this.findsum();
+
     this.reloadData();
+   
   }
+   
   reloadData() {
 
-    this.order = this.oService.getOrderList();
+    this.user = this.route.snapshot.paramMap.get('id');
+    this.order = this.oService.getOrderById(this.user);
   }
 
-
+  
   deleteProduct(orderId: number) {
     this.oService.deleteOrder(orderId)
       .subscribe(
@@ -38,9 +48,11 @@ export class CartComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['payment']).then(() => {
+    this.router.navigate(['payment',this.user]).then(() => {
       window.location.reload();
 
     });
   }
+
+  
 }
