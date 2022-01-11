@@ -59,7 +59,7 @@
                         <label>Name on Card
                             <input type="text" formControlName="cardName" class="full-width" id="name"
                             [ngClass]="{ 'is-invalid': submitted && f.cardName.errors }"
-                            placeholder="Utkarsha Agarwal" required autofocus/>
+                            placeholder="Enter Name here" required autofocus/>
                             
                         </label>
                         <div class="expire-ccv">
@@ -82,7 +82,7 @@
                     <input type="checkbox">
                     Save details for future payment
                 </label>
-                <button class="btn btn-success" (click)="gotoList()" >Place Your Order</button>
+                <button class="btn btn-success" >Place Your Order</button>
             </form>
    
         </div>

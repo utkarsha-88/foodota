@@ -1,0 +1,24 @@
+<section>
+    <div class="form-container">
+        <h1>ADMIN</h1>
+        <form class="form-group" ngNativeValidate>
+            <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+            <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+            <div class="form-group">
+                <label for="email">User Name </label>
+                <input type="text" class="form-control" id="username" [(ngModel)]="username"
+                    placeholder="Enter User Name" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="password" class="form-control" [(ngModel)]="password" id="password"
+                    placeholder="Enter password" name="password" required>
+            </div><br>
+            <button (click)="checkLogin()" class="btn btn-success w-100">Login</button>
+        </form>
+        <div class="link">
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
+
+</section>

@@ -13,7 +13,7 @@ import { CustomerService } from '../customer.service';
 })
 export class AccountComponent implements OnInit {
 
-  id: number = 0;
+  id: any;
   customer: Customer | any;
   submitted = false;
   customers: Observable<Customer[]> | any;

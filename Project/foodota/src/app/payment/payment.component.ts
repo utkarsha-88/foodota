@@ -40,7 +40,7 @@ export class PaymentComponent implements OnInit {
    this.pService.newPayment(this.payment,this.user)
      .subscribe(data => console.log(data), error => console.log(error));
    this.payment = new Payment();
-   // this.gotoList();
+   this.gotoList();
  }
 
 

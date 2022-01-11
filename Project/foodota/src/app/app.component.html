@@ -10,8 +10,11 @@
       <a *ngIf="loginService.isUserLoggedIn()" routerLink="home" class="nav-link" routerLinkActive="active">Home</a>
     </li>
     <li class="nav-item">
-      <a *ngIf="loginService.isUserLoggedIn()" routerLink="account" class="nav-link" routerLinkActive="active">Account</a>
+      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="admin" class="nav-link" routerLinkActive="active">Admin</a>
     </li>
+    <!-- <li class="nav-item">
+      <a *ngIf="loginService.isUserLoggedIn()" (click)="editProduct()" class="nav-link" routerLinkActive="active">Account</a>
+    </li> -->
     <li class="nav-item">
       <a *ngIf="loginService.isUserLoggedIn()" routerLink="contact" class="nav-link" routerLinkActive="active">Contact</a>
     </li>

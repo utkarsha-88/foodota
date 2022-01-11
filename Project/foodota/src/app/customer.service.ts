@@ -12,6 +12,10 @@ export class CustomerService {
 
   constructor(private http:HttpClient) { }
 
+  getProductList(): Observable<any>{
+
+    return this.http.get(`${this.baseUrl}`);
+  }
   
   getProduct(id:number):Observable<any>{
 
@@ -21,6 +25,10 @@ export class CustomerService {
   updateProduct(id:number,value:any):Observable<Object>{
 
     return this.http.put(`${this.baseUrl}/${id}`,value);
+  }
+
+  deleteCustomer(id: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
 
 }

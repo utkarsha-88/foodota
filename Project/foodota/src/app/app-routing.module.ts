@@ -10,6 +10,9 @@ import { CartComponent } from './cart/cart.component';
 import { LogoutComponent } from './logout/logout.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AccountComponent } from './account/account.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminconsoleComponent } from './adminconsole/adminconsole.component';
+import { CustomerdetailsComponent } from './customerdetails/customerdetails.component';
 
 const routes: Routes = [
 {path:'' ,redirectTo:'home' ,pathMatch:'full'},
@@ -21,7 +24,10 @@ const routes: Routes = [
 {path:'cart/:id',component:CartComponent},
 {path:'logout',component:LogoutComponent},
 {path:'payment/:id',component:PaymentComponent},
-{path:'account',component:AccountComponent}
+{path:'account/:id',component:AccountComponent},
+{path:'admin',component:AdminComponent},
+{path:'adminconsole',component:AdminconsoleComponent},
+{path:'customerdetails',component:CustomerdetailsComponent}
 ];
 
 @NgModule({
