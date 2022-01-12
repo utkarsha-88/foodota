@@ -15,9 +15,9 @@ text-align: center;">BIRYANI</h2>
           name="quantity1" /><br><br>
         <select name="size1" id="size1" onclick="deleteE('message1')">
                         <option value="size" diasbled selected>More</option>
-            <option value="Extra Cheese">Gravy</option>
-            <option value="French Fries">Koshimbir</option>
-            <option value="Cold Drink">Raita</option>
+            <option value="Gravy">Gravy</option>
+            <option value="Koshimbi">Koshimbir</option>
+            <option value="Raita">Raita</option>
         </select>
         <div>
           <button class="addTo" onclick="add(1)" (click)="onSubmit('Mutton Biryani',350, order.qty )">Add</button>
@@ -25,6 +25,8 @@ text-align: center;">BIRYANI</h2>
       </div>
       <p id="message1"></p>
     </div>
+    <!-- Ends here -->
+
     <div id="content">
       <img src="../../assets/images/chikenbiryani.jpg" />
       <div class="prod">
@@ -36,10 +38,10 @@ text-align: center;">BIRYANI</h2>
         Add Quantity: <input type="number" id="qty2" min="1" max="99" value="1" required [(ngModel)]="order.qty"
           name="quantity2" /><br><br>
         <select name="size2" id="size2" onclick="deleteE('message2')">
-            <option value="size" diasbled selected>More</option>
-                        <option value="Extra Cheese">Gravy</option>
-                        <option value="French Fries">Koshimbir</option>
-                        <option value="Cold Drink">Raita</option>
+          <option value="size" diasbled selected>More</option>
+                      <option value="Gravy">Gravy</option>
+                      <option value="Koshimbi">Koshimbir</option>
+                      <option value="Raita">Raita</option>
         </select>
         <div>
           <button class="addTo" onclick="add(2)" (click)="onSubmit('Chiken Biryani',550, order.qty )">Add</button>
@@ -47,6 +49,8 @@ text-align: center;">BIRYANI</h2>
       </div>
       <p id="message2"></p>
     </div>
+    <!-- Ends here -->
+
     <div id="content">
       <img src="../../assets/images/vegbiryani.jpg" />
       <div class="prod">
@@ -69,6 +73,8 @@ text-align: center;">BIRYANI</h2>
       </div>
       <p id="message3"></p>
     </div>
+    <!-- Ends here -->
+
     <div id="content">
       <img src="../../assets/images/DumBiryani.jpg" />
       <div class="prod">
@@ -90,12 +96,14 @@ text-align: center;">BIRYANI</h2>
       </div>
       <p id="message4"></p>
     </div>
+    <!-- Ends here -->
+
     <div id="content">
       <img src="../../assets/images/Hydrabadibiryani.jpg" />
       <div class="prod">
-        <h3 class="tit" id="brand4" name="orderName">Hyderabadi Biryani</h3><br><br>
+        <h3 class="tit" id="brand5" name="orderName">Hyderabadi Biryani</h3><br><br>
       </div>
-      <h4 id="price4" name="orderPrice">699.00 ₹</h4>
+      <h4 id="price5" name="orderPrice">699.00 ₹</h4>
       <div class="inputs">
         Add Quantity: <input type="number" id="qty5" min="1" max="99" value="1" required [(ngModel)]="order.qty"
           name="quantity5" /><br><br>
@@ -111,16 +119,18 @@ text-align: center;">BIRYANI</h2>
       </div>
       <p id="message5"></p>
     </div>
+    <!-- Ends here -->
+
     <div id="content">
       <img src="../../assets/images/vegbiryani.jpg" />
       <div class="prod">
-        <h3 class="tit" id="brand5" name="orderName">Special Biryani</h3><br><br>
+        <h3 class="tit" id="brand6" name="orderName">Special Biryani</h3><br><br>
       </div>
-      <h4 id="price5" name="orderPrice">999.00 ₹</h4>
+      <h4 id="price6" name="orderPrice">999.00 ₹</h4>
       <div class="inputs">
         Add Quantity: <input type="number" id="qty6" min="1" max="99" value="1" required [(ngModel)]="order.qty"
           name="quantity6" /><br><br>
-        <select name="size5" id="size5" onclick="deleteE('message6')">
+        <select name="size6" id="size6" onclick="deleteE('message6')">
             <option value="size" diasbled selected>More</option>
             <option value="Extra Cheese">Gravy</option>
             <option value="French Fries">Koshimbir</option>

@@ -7,7 +7,7 @@
   </a>
   <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-      <a *ngIf="loginService.isUserLoggedIn()" routerLink="home" class="nav-link" routerLinkActive="active">Home</a>
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="home/id" class="nav-link" routerLinkActive="active">Home</a>
     </li>
     <li class="nav-item">
       <a *ngIf="!loginService.isUserLoggedIn()" routerLink="admin" class="nav-link" routerLinkActive="active">Admin</a>

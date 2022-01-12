@@ -25,6 +25,8 @@ text-align: center;">CAKES</h2>
       </div>
       <p id="message1"></p>
     </div>
+    <!-- Ends here -->
+
     <div id="content">
       <img src="../../assets/images/Photo cake.jpg" />
       <div class="prod">
@@ -47,6 +49,8 @@ text-align: center;">CAKES</h2>
       </div>
       <p id="message2"></p>
     </div>
+    <!-- Ends here -->
+
     <div id="content">
       <img src="../../assets/images/Layer Cake.jpg" />
       <div class="prod">
@@ -69,6 +73,8 @@ text-align: center;">CAKES</h2>
       </div>
       <p id="message3"></p>
     </div>
+    <!-- Ends here -->
+
     <div id="content">
       <img src="../../assets/images/Icecake.jpg" />
       <div class="prod">
@@ -90,12 +96,14 @@ text-align: center;">CAKES</h2>
       </div>
       <p id="message4"></p>
     </div>
+    <!-- Ends here -->
+
     <div id="content">
       <img src="../../assets/images/blueberrylemancake.jpg" />
       <div class="prod">
-        <h3 class="tit" id="brand4" name="orderName">Blueberry Lemon Cake</h3><br><br>
+        <h3 class="tit" id="brand5" name="orderName">Blueberry Lemon Cake</h3><br><br>
       </div>
-      <h4 id="price4" name="orderPrice">699.00 ₹</h4>
+      <h4 id="price5" name="orderPrice">699.00 ₹</h4>
       <div class="inputs">
         Add Quantity: <input type="number" id="qty5" min="1" max="99" value="1" required [(ngModel)]="order.qty"
           name="quantity5" /><br><br>
@@ -111,23 +119,25 @@ text-align: center;">CAKES</h2>
       </div>
       <p id="message5"></p>
     </div>
+    <!-- Ends here -->
+
     <div id="content">
       <img src="../../assets/images/Redvelvatecake.jpg" />
       <div class="prod">
-        <h3 class="tit" id="brand5" name="orderName">Special Cake</h3><br><br>
+        <h3 class="tit" id="brand6" name="orderName">Special Cake</h3><br><br>
       </div>
-      <h4 id="price5" name="orderPrice">999.00 ₹</h4>
+      <h4 id="price6" name="orderPrice">999.00 ₹</h4>
       <div class="inputs">
         Add Quantity: <input type="number" id="qty6" min="1" max="99" value="1" required [(ngModel)]="order.qty"
           name="quantity6" /><br><br>
-        <select name="size5" id="size5" onclick="deleteE('message6')">
+        <select name="size6" id="size6" onclick="deleteE('message6')">
           <option value="size" diasbled selected>More</option>
             <option value="Toppings">Toppings</option>
             <option value="Chocolate chips">Chocolate chips</option>
             <option value="Tutti frutti">Tutti frutti</option>
         </select>
         <div>
-          <button class="addTo" onclick="add(6)" (click)="onSubmit('Special Cake',999, order.qty )">Add</button>
+          <button class="addTo" onclick="add(6)" (click)="onSubmit('SpecialCake',999, order.qty )">Add</button>
         </div>
       </div>
       <p id="message6"></p>

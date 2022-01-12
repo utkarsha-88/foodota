@@ -11,16 +11,17 @@ import { AdminService } from './admin.service';
 })
 export class AppComponent {
   title = 'foodota';
-
-  id: any;
+ 
+  
   constructor(public loginService : AuthenticationService, public aService:AdminService,private route:ActivatedRoute, private router:Router){}
 
   // onItemSelect(){ 
 
   //   this.router.navigate(['account',this.route.snapshot.paramMap.get('id')]);
   // }
-  editProduct() {
-    this.id =  this.route.snapshot.params['id'];
-    this.router.navigate(['account',this.id])  
+  id =  this.route.snapshot.paramMap.get('id');
+  viewCart() {
+    
+    this.router.navigate(['cart',this.id])  
   }
 }
