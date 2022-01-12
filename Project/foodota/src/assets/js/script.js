@@ -3,9 +3,7 @@ var total = 0;
 
 var i = 1;
 
-var k = 1;
-
-var message = "Please select a size";
+var message = "Please select a More";
 
 // List of the amount of every product in the cart
 var itemCost = [];
@@ -26,7 +24,7 @@ function add(n){
 
    brand = "brand" + n;
    priceId = "price" + n;
-   quantityId = "quantity" + n;
+   quantityId = "qty" + n;
   
 
    iname = document.getElementById(brand).innerHTML;
@@ -47,7 +45,7 @@ function add(n){
    i += 1;
 
     // text of the li element
-   var textnode = document.createTextNode("Item Name = "+iname+" | "+" Quantity = "+quantity+" \nPrice = "+price+"₹, size: "+size);
+   var textnode = document.createTextNode("Item Name = "+iname+" | "+" Quantity = "+quantity+" \nPrice = "+price+" More: "+size);
 
    // add the text to li element
    node.appendChild(textnode);
@@ -59,10 +57,10 @@ function add(n){
 total += Number(price) * Number(quantity);
 
 // update the total
-document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + " ₹";
+// document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + " ₹";
 
 //Add a remove button
-document.getElementById(item).innerHTML += '&nbsp;&nbsp;<button class="btn btn-danger btn-sm" onclick="deleItem('+"'"+item+"'"+')"> Remove </button><br><br>';
+document.getElementById(item).innerHTML += '&nbsp;<button class="btn btn-danger btn-sm" onclick="deleItem('+"'"+item+"'"+')"> Remove </button><br><br>';
 
 return total;
 
@@ -114,6 +112,6 @@ function deleItem(eId){
   // cell3.innerHTML = price;
   // i++;
 
-  document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + "₹"; 
+  // document.getElementById("total").innerHTML = "Total: " + total.toFixed(2) + "₹"; 
 }
 

@@ -20,6 +20,11 @@ import { AdminComponent } from './admin/admin.component';
 import { ResturantComponent } from './resturant/resturant.component';
 import { AdminconsoleComponent } from './adminconsole/adminconsole.component';
 import { CustomerdetailsComponent } from './customerdetails/customerdetails.component';
+import { CakeitemComponent } from './cakeitem/cakeitem.component';
+import { BriyaniitemsComponent } from './briyaniitems/briyaniitems.component';
+import { DrinkitemsComponent } from './drinkitems/drinkitems.component';
+import { IcecreamitemsComponent } from './icecreamitems/icecreamitems.component';
+import { PizzaitemsComponent } from './pizzaitems/pizzaitems.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,12 @@ import { CustomerdetailsComponent } from './customerdetails/customerdetails.comp
     AdminComponent,
     ResturantComponent,
     AdminconsoleComponent,
-    CustomerdetailsComponent
+    CustomerdetailsComponent,
+    CakeitemComponent,
+    BriyaniitemsComponent,
+    DrinkitemsComponent,
+    IcecreamitemsComponent,
+    PizzaitemsComponent
   ],
   imports: [
     BrowserModule,

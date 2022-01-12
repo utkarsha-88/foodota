@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
 
   order: Observable<Order[]> | any;
   user: any;
-  total: number = 0
+  amount: number = 0
 
   
 
@@ -34,6 +34,19 @@ export class CartComponent implements OnInit {
 
     this.user = this.route.snapshot.paramMap.get('id');
     this.order = this.oService.getOrderById(this.user);
+    this.oService.getOrderById(this.user).subscribe(data=>{
+      console.log(data);
+
+      for(let i =0; i< data.length; i++){
+
+        this.amount += data[i].total;
+       
+      }
+      console.log(this.amount);
+    })
+    
+    
+    
   }
 
   
@@ -48,7 +61,7 @@ export class CartComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['payment',this.user]).then(() => {
+    this.router.navigate(['payment',this.user,this.amount]).then(() => {
       window.location.reload();
 
     });

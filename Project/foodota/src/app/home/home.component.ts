@@ -18,8 +18,32 @@ export class HomeComponent implements OnInit {
     
   }
 
-  onItemSelect(){ 
+  onburger(){ 
 
     this.router.navigate(['/item',this.route.snapshot.paramMap.get('id')]);
+  }
+
+  onCake(){ 
+
+    this.router.navigate(['/cake',this.route.snapshot.paramMap.get('id')]);
+  }
+
+  onPizza(){ 
+
+    this.router.navigate(['/pizza',this.route.snapshot.paramMap.get('id')]);
+  }
+
+  onBriyani(){ 
+
+    this.router.navigate(['/briyani',this.route.snapshot.paramMap.get('id')]);
+  }
+  onDrinks(){ 
+
+    this.router.navigate(['/drinks',this.route.snapshot.paramMap.get('id')]);
+  }
+
+  onIcecream(){ 
+
+    this.router.navigate(['/ice',this.route.snapshot.paramMap.get('id')]);
   }
 }

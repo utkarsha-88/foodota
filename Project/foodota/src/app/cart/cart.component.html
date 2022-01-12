@@ -1,6 +1,6 @@
 <div class="panel panel-primary">
     <div class="panel-heading">
-        <h2>Your Cart List</h2>
+        <h2 style="text-align: center; ">Your Cart List</h2><br>
     </div>
     <div class="panel-body">
         <table class="table table-striped table-info">
@@ -19,10 +19,8 @@
                     <td>{{ cart.orderId }}</td>
                     <td>{{ cart.orderName | uppercase }}</td>
                     <td>{{ cart.qty}}</td>
-                    <td >{{ cart.orderPrice | currency:"INR"}}</td>
-                    <td class = "price_value">{{cart.orderPrice*cart.qty }}</td>
-                    
-                    
+                    <td>{{ cart.orderPrice | currency:"INR"}}</td>
+                    <td>{{cart.total}}</td>
                     <td>
 
                           <button (click)="deleteProduct(cart.orderId)" class="btn btn-danger"
@@ -30,13 +28,15 @@
 
                     </td>
                 </tr>
-               
+
             </tbody>
         </table>
-        
-        <button class="btn btn-warning"
-        (click)="gotoList()"
-        style=" float: right; margin-right: 165px;">Payment</button><br>
-        
+        <div id="amt">
+            <span>Total Amount: </span>
+            <h2>₹ {{amount}}</h2>
+        </div>
+        <button class="btn btn-warning" (click)="gotoList()"
+            style=" float: right; margin-right: 165px;">Payment</button><br>
+
     </div>
 </div>

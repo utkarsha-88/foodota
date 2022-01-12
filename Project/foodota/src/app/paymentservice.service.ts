@@ -11,8 +11,8 @@ export class PaymentserviceService {
 
   constructor(private http:HttpClient) { }
 
-  newPayment(payment:Object,user:string){
+  newPayment(payment:Object,user:string,amount:string){
 
-    return this.http.post(`${this.baseUrl}/${user}`,payment);
+    return this.http.post(`${this.baseUrl}/${user}/${amount}`,payment);
   }
 }

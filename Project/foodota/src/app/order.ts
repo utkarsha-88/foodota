@@ -8,6 +8,8 @@ qty:number = 0;
 
 orderPrice:number = 0;
 
+amount:number = 0;
+
 
 
 

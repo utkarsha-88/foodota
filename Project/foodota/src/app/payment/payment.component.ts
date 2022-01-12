@@ -17,6 +17,7 @@ export class PaymentComponent implements OnInit {
   payment: Payment = new Payment();
   submitted = false;
   user:any
+  amount:any
 
   constructor(private formBuilder: FormBuilder,private pService: PaymentserviceService,private router:Router, private route:ActivatedRoute) { }
 
@@ -35,9 +36,10 @@ export class PaymentComponent implements OnInit {
 
   save() {
     this.user = this.route.snapshot.params['id'];
+    this.amount = this.route.snapshot.params['amount'];
    console.log(this.payment);
    console.log(this.user);
-   this.pService.newPayment(this.payment,this.user)
+   this.pService.newPayment(this.payment,this.user, this.amount)
      .subscribe(data => console.log(data), error => console.log(error));
    this.payment = new Payment();
    this.gotoList();
@@ -55,7 +57,7 @@ export class PaymentComponent implements OnInit {
  }
 
  gotoList() {
-   alert('Your Order Has Been Placed Successfully!!!')
+   alert("Your Order  of ₹" +this.amount+ " Has Been Placed Successfully!!!")
    this.router.navigate(['/home',this.route.snapshot.paramMap.get('id')]).then(() => {
      window.location.reload();
 

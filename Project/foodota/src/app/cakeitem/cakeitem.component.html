@@ -1,0 +1,151 @@
+<h2 style="background-color:rgb(228, 65, 65);
+color: aliceblue;
+
+text-align: center;">CAKES</h2>
+<div class="container d-flex justify-content-center">
+  <div class="articles">
+    <div id="content">
+      <img src="../../assets/images/redvelvet.jpg" />
+      <div class="prod">
+        <h3 class="tit" id="brand1" name="orderName">Red Velvet</h3><br><br>
+      </div>
+      <h4 id="price1" name="orderPrice">550.00 ₹ </h4>
+      <div class="inputs">
+        Add Quantity: <input type="number" id="qty1" min="1" max="99" value="1" required [(ngModel)]="order.qty"
+          name="quantity1" /><br><br>
+        <select name="size1" id="size1" onclick="deleteE('message1')">
+          <option value="size" diasbled selected>More</option>
+                      <option value="Toppings">Toppings</option>
+                      <option value="Chocolate chips">Chocolate chips</option>
+                      <option value="Tutti frutti">Tutti frutti</option>
+        </select>
+        <div>
+          <button class="addTo" onclick="add(1)" (click)="onSubmit('Red Velvet',550, order.qty )">Add</button>
+        </div>
+      </div>
+      <p id="message1"></p>
+    </div>
+    <div id="content">
+      <img src="../../assets/images/Photo cake.jpg" />
+      <div class="prod">
+        <h3 class="tit" id="brand2" name="orderName">Photo Cake</h3><br><br>
+      </div>
+      <h4 id="price2" name="orderPrice">300.00 ₹ </h4>
+
+      <div class="inputs">
+        Add Quantity: <input type="number" id="qty2" min="1" max="99" value="1" required [(ngModel)]="order.qty"
+          name="quantity2" /><br><br>
+        <select name="size2" id="size2" onclick="deleteE('message2')">
+          <option value="size" diasbled selected>More</option>
+                      <option value="Toppings">Toppings</option>
+                      <option value="Chocolate chips">Chocolate chips</option>
+                      <option value="Tutti frutti">Tutti frutti</option>
+        </select>
+        <div>
+          <button class="addTo" onclick="add(2)" (click)="onSubmit('Photo Cake',300, order.qty )">Add</button>
+        </div>
+      </div>
+      <p id="message2"></p>
+    </div>
+    <div id="content">
+      <img src="../../assets/images/Layer Cake.jpg" />
+      <div class="prod">
+        <h3 class="tit" id="brand3" name="orderName">Rainbow Cake</h3><br><br>
+      </div>
+      <h4 id="price3" name="orderPrice">650.00 ₹</h4>
+
+      <div class="inputs">
+        Add Quantity: <input type="number" id="qty3" min="1" max="99" value="1" required [(ngModel)]="order.qty"
+          name="quantity3" /><br><br>
+        <select name="size3" id="size3" onclick="deleteE('message3')">
+          <option value="size" diasbled selected>More</option>
+                      <option value="Toppings">Toppings</option>
+                      <option value="Chocolate chips">Chocolate chips</option>
+                      <option value="Tutti frutti">Tutti frutti</option>
+        </select>
+        <div>
+          <button class="addTo" onclick="add(3)" (click)="onSubmit('RainbowCake',650, order.qty )">Add</button>
+        </div>
+      </div>
+      <p id="message3"></p>
+    </div>
+    <div id="content">
+      <img src="../../assets/images/Icecake.jpg" />
+      <div class="prod">
+        <h3 class="tit" id="brand4" name="orderName">Ice Cake</h3><br><br>
+      </div>
+      <h4 id="price4" name="orderPrice">400.00 ₹</h4>
+      <div class="inputs">
+        Add Quantity: <input type="number" id="qty4" min="1" max="99" value="1" required [(ngModel)]="order.qty"
+          name="quantity4" /><br><br>
+        <select name="size4" id="size4" onclick="deleteE('message4')">
+          <option value="size" diasbled selected>More</option>
+                      <option value="Toppings">Toppings</option>
+                      <option value="Chocolate chips">Chocolate chips</option>
+                      <option value="Tutti frutti">Tutti frutti</option>
+        </select>
+        <div>
+          <button class="addTo" onclick="add(4)" (click)="onSubmit('Ice Cake',400, order.qty )">Add</button>
+        </div>
+      </div>
+      <p id="message4"></p>
+    </div>
+    <div id="content">
+      <img src="../../assets/images/blueberrylemancake.jpg" />
+      <div class="prod">
+        <h3 class="tit" id="brand4" name="orderName">Blueberry Lemon Cake</h3><br><br>
+      </div>
+      <h4 id="price4" name="orderPrice">699.00 ₹</h4>
+      <div class="inputs">
+        Add Quantity: <input type="number" id="qty5" min="1" max="99" value="1" required [(ngModel)]="order.qty"
+          name="quantity5" /><br><br>
+        <select name="size5" id="size5" onclick="deleteE('message5')">
+          <option value="size" diasbled selected>More</option>
+            <option value="Toppings">Toppings</option>
+            <option value="Chocolate chips">Chocolate chips</option>
+            <option value="Tutti frutti">Tutti frutti</option>
+        </select>
+        <div>
+          <button class="addTo" onclick="add(5)" (click)="onSubmit('Blueberry Lemon Cake',699, order.qty )">Add</button>
+        </div>
+      </div>
+      <p id="message5"></p>
+    </div>
+    <div id="content">
+      <img src="../../assets/images/Redvelvatecake.jpg" />
+      <div class="prod">
+        <h3 class="tit" id="brand5" name="orderName">Special Cake</h3><br><br>
+      </div>
+      <h4 id="price5" name="orderPrice">999.00 ₹</h4>
+      <div class="inputs">
+        Add Quantity: <input type="number" id="qty6" min="1" max="99" value="1" required [(ngModel)]="order.qty"
+          name="quantity6" /><br><br>
+        <select name="size5" id="size5" onclick="deleteE('message6')">
+          <option value="size" diasbled selected>More</option>
+            <option value="Toppings">Toppings</option>
+            <option value="Chocolate chips">Chocolate chips</option>
+            <option value="Tutti frutti">Tutti frutti</option>
+        </select>
+        <div>
+          <button class="addTo" onclick="add(6)" (click)="onSubmit('Special Cake',999, order.qty )">Add</button>
+        </div>
+      </div>
+      <p id="message6"></p>
+    </div>
+  </div>
+  <hr style="border: 10px black; width: 100%; height: 10px;">
+  <div class="cart">
+
+    <h3 class="tit" style="background-color:rgb(228, 65, 65);
+      color: aliceblue;
+      text-align: center;
+      ">My Cart</h3><br>
+    <ol id="items">
+
+    </ol><br>
+    <hr style="size: 10px;">
+    <!-- <h3 id="total" style="text-align: right">Total: 0 ₹</h3> -->
+    <input type="button" class="btn btn-outline-success mt-5" (click)="gotoList()" value="View Cart" />
+  </div>
+
+</div>
