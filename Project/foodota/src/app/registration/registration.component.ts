@@ -35,12 +35,6 @@ export class RegistrationComponent implements OnInit {
 
   get f() { return this.registerForm.controls; }
 
-  // changeCity(e:any) {
-  //   this.registerForm.get('city').setValue(e.target.value, {
-  //    onlySelf: true
-  //   })
-  // }
-
   Customer(): void {
     this.submitted = false;
     this.customer= new Customer();
